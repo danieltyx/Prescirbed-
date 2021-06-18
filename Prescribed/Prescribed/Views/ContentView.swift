@@ -13,7 +13,6 @@ struct ContentView: View {
         ZStack
         {
             WelcomeView()
-            WelcomeView()
             var signedup = true
             SignUpLogInView()
             if signedup
@@ -24,7 +23,6 @@ struct ContentView: View {
             {
                 LoginView()
             }
-            
         }
     }
 }

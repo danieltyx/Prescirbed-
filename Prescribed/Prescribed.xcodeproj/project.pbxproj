@@ -15,6 +15,7 @@
 		734E502A267CDC3700F60F91 /* SignUpLogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E5029267CDC3700F60F91 /* SignUpLogInView.swift */; };
 		734E502C267CDC4000F60F91 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E502B267CDC4000F60F91 /* SignUpView.swift */; };
 		734E502E267CDC5300F60F91 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E502D267CDC5300F60F91 /* LoginView.swift */; };
+		734E5031267CE25000F60F91 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E5030267CE25000F60F91 /* Doctor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		734E5029267CDC3700F60F91 /* SignUpLogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLogInView.swift; sourceTree = "<group>"; };
 		734E502B267CDC4000F60F91 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		734E502D267CDC5300F60F91 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		734E5030267CE25000F60F91 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Doctor.swift; path = ../../../../../../Doctor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,9 @@
 		734E5014267CD9EF00F60F91 /* Prescribed */ = {
 			isa = PBXGroup;
 			children = (
-				734E5015267CD9EF00F60F91 /* PrescribedApp.swift */,
+				734E5032267CE26300F60F91 /* App */,
+				734E502F267CE24300F60F91 /* Models */,
 				734E5024267CDBA600F60F91 /* Views */,
-				734E5019267CD9F300F60F91 /* Assets.xcassets */,
-				734E501E267CD9F300F60F91 /* Info.plist */,
 				734E501B267CD9F300F60F91 /* Preview Content */,
 			);
 			path = Prescribed;
@@ -87,6 +88,24 @@
 				734E502D267CDC5300F60F91 /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		734E502F267CE24300F60F91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				734E5030267CE25000F60F91 /* Doctor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		734E5032267CE26300F60F91 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				734E501E267CD9F300F60F91 /* Info.plist */,
+				734E5019267CD9F300F60F91 /* Assets.xcassets */,
+				734E5015267CD9EF00F60F91 /* PrescribedApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +183,7 @@
 				734E502A267CDC3700F60F91 /* SignUpLogInView.swift in Sources */,
 				734E502C267CDC4000F60F91 /* SignUpView.swift in Sources */,
 				734E5016267CD9EF00F60F91 /* PrescribedApp.swift in Sources */,
+				734E5031267CE25000F60F91 /* Doctor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
