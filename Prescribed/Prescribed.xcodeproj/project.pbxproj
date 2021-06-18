@@ -62,6 +62,7 @@
 		734E5014267CD9EF00F60F91 /* Prescribed */ = {
 			isa = PBXGroup;
 			children = (
+				734E501E267CD9F300F60F91 /* Info.plist */,
 				734E5032267CE26300F60F91 /* App */,
 				734E502F267CE24300F60F91 /* Models */,
 				734E5024267CDBA600F60F91 /* Views */,
@@ -101,7 +102,6 @@
 		734E5032267CE26300F60F91 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				734E501E267CD9F300F60F91 /* Info.plist */,
 				734E5019267CD9F300F60F91 /* Assets.xcassets */,
 				734E5015267CD9EF00F60F91 /* PrescribedApp.swift */,
 			);
