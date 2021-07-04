@@ -1,0 +1,6 @@
+framework module Pods_Prescribed {
+  umbrella header "Pods-Prescribed-umbrella.h"
+
+  export *
+  module * { export * }
+}
