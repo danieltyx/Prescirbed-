@@ -18,6 +18,7 @@
 		BDE1A390269B4C1100C29042 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1A38F269B4C1100C29042 /* GoogleService-Info-2.plist */; };
 		BDE1A392269B556D00C29042 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = BDE1A391269B556D00C29042 /* Poppins */; };
 		BDE1A395269B568100C29042 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDE1A394269B567600C29042 /* Poppins-Regular.ttf */; };
+		BDE1A39726A484E400C29042 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1A39626A484E400C29042 /* LoginViewController.swift */; };
 		F99AEEEAC2A62091D009B725 /* Pods_Prescribed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFFE6A0025D4D1B8259D1E2 /* Pods_Prescribed.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		BDE1A38F269B4C1100C29042 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		BDE1A391269B556D00C29042 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		BDE1A394269B567600C29042 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		BDE1A39626A484E400C29042 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAFFE6A0025D4D1B8259D1E2 /* Pods_Prescribed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prescribed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74EB5DA0AECE241B8A87BC2 /* Pods-Prescribed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribed.release.xcconfig"; path = "Target Support Files/Pods-Prescribed/Pods-Prescribed.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				BDE1A38D269B487900C29042 /* WelcomeViewController.swift */,
+				BDE1A39626A484E400C29042 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDE1A39726A484E400C29042 /* LoginViewController.swift in Sources */,
 				BDE1A38A2691FC8D00C29042 /* User.swift in Sources */,
 				BDE1A38E269B487900C29042 /* WelcomeViewController.swift in Sources */,
 				BDE1A3702691E97F00C29042 /* AppDelegate.swift in Sources */,
