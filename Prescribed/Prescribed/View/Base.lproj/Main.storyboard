@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wpd-O7-6ML">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1365" y="39"/>
+            <point key="canvasLocation" x="-1619" y="39"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="1C3-iK-Dhu">
@@ -91,6 +91,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADF-ya-v16">
                                 <rect key="frame" x="52" y="725" width="311" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45086616280000003" green="0.86294513939999995" blue="0.38813120130000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,6 +122,9 @@
                                 <rect key="frame" x="51" y="57" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Image-1"/>
+                                <connections>
+                                    <action selector="backAction:" destination="wpd-O7-6ML" eventType="touchUpInside" id="Div-Tg-4Ex"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login with your credentials" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9p9-7Y-X8h">
                                 <rect key="frame" x="51" y="95" width="284" height="74"/>
@@ -137,8 +141,19 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AV7-Fd-dfx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7hh-e4-dtk"/>
+                    <connections>
+                        <outlet property="backButton" destination="ZK0-xY-ogx" id="FnK-uY-2Fh"/>
+                        <outlet property="directionsLabel" destination="9p9-7Y-X8h" id="x46-Zu-kBd"/>
+                        <outlet property="emailLabel" destination="0Px-FX-wtq" id="Z00-7a-xkd"/>
+                        <outlet property="emailTextField" destination="GQO-AL-T1e" id="IZA-OZ-2qV"/>
+                        <outlet property="loginButton" destination="ADF-ya-v16" id="nTh-E0-mXO"/>
+                        <outlet property="loginLabel" destination="MV5-OF-mjc" id="irE-tp-fQO"/>
+                        <outlet property="passwordLabel" destination="eqk-8y-oqu" id="XoC-Qz-09j"/>
+                        <outlet property="passwordTextField" destination="GNE-cZ-GUP" id="oB2-OT-LAr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnK-Zr-wSS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +179,7 @@
         <image name="Image-1" width="76" height="76"/>
         <image name="greeting_page_export-1" width="375" height="489"/>
         <namedColor name="AccentColor">
-            <color red="0.86299999999999999" green="0.89400000000000002" blue="0.90600000000000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.86299997568130493" green="0.89399999380111694" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
