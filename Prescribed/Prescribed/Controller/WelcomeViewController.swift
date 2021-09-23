@@ -45,6 +45,7 @@ class WelcomeViewController: UIViewController
         loginButton.titleLabel?.textColor = UIColor(red: 0.094, green: 0.094, blue: 0.094, alpha: 1)
         loginButton.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 18)
         loginButton.titleLabel?.textAlignment = .center
+    
 
 
         self.view.addSubview(welcomeLabel)

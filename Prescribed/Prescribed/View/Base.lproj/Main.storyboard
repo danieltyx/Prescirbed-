@@ -77,7 +77,7 @@
         <!--Login View Controller-->
         <scene sceneID="1C3-iK-Dhu">
             <objects>
-                <viewController id="wpd-O7-6ML" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="wpd-O7-6ML" customClass="LoginViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bs2-n3-Mqk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,14 +98,14 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-FX-wtq">
-                                <rect key="frame" x="50" y="223" width="56" height="29"/>
+                                <rect key="frame" x="50" y="223" width="284" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqk-8y-oqu">
-                                <rect key="frame" x="50" y="323" width="100" height="29"/>
+                                <rect key="frame" x="50" y="323" width="284" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -121,6 +121,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-xY-ogx">
                                 <rect key="frame" x="51" y="57" width="38" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
                                 <state key="normal" image="Image-1"/>
                                 <connections>
                                     <action selector="backAction:" destination="wpd-O7-6ML" eventType="touchUpInside" id="Div-Tg-4Ex"/>
@@ -139,6 +142,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUf-rV-ocC" userLabel="LoginWatermark">
+                                <rect key="frame" x="51" y="30" width="319" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AV7-Fd-dfx"/>
                         <color key="backgroundColor" name="AccentColor"/>
@@ -151,6 +161,7 @@
                         <outlet property="emailTextField" destination="GQO-AL-T1e" id="IZA-OZ-2qV"/>
                         <outlet property="loginButton" destination="ADF-ya-v16" id="nTh-E0-mXO"/>
                         <outlet property="loginLabel" destination="MV5-OF-mjc" id="irE-tp-fQO"/>
+                        <outlet property="loginWatermark" destination="uUf-rV-ocC" id="Hgk-yy-Ce7"/>
                         <outlet property="passwordLabel" destination="eqk-8y-oqu" id="XoC-Qz-09j"/>
                         <outlet property="passwordTextField" destination="GNE-cZ-GUP" id="oB2-OT-LAr"/>
                     </connections>
