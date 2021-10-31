@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
         nextButton.widthAnchor.constraint(equalToConstant: 95).isActive = true
         nextButton.heightAnchor.constraint(equalToConstant: 54).isActive = true
         nextButton.backgroundColor = UIColor(red: 0.247, green: 0.875, blue: 0.31, alpha: 1)
-        //nextButton.clipsToBounds = true
+        nextButton.clipsToBounds = true
         nextButton.layer.cornerRadius = 20
         nextButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         nextButton.layer.shadowOpacity = 1

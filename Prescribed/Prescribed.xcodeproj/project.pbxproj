@@ -10,7 +10,9 @@
 		BD11ADE3272EF0EE0020E9D9 /* chatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11ADE2272EF0EE0020E9D9 /* chatBotViewController.swift */; };
 		BD11ADE5272EF1060020E9D9 /* prescribedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11ADE4272EF1060020E9D9 /* prescribedViewController.swift */; };
 		BD11ADE7272EF11F0020E9D9 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11ADE6272EF11F0020E9D9 /* profileViewController.swift */; };
-		BD7EE63C26FBD59A00D54707 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7EE63726FBD59400D54707 /* Poppins-Regular.ttf */; };
+		BD698FA1272F1DB900C0EFF8 /* doctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD698FA0272F1DB900C0EFF8 /* doctorViewController.swift */; };
+		BD698FA3272F1DE900C0EFF8 /* pLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD698FA2272F1DE900C0EFF8 /* pLinksViewController.swift */; };
+		BD698FA4272F20D200C0EFF8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7EE63726FBD59400D54707 /* Poppins-Regular.ttf */; };
 		BD7EE63E26FBD5A400D54707 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7EE63426FBD59300D54707 /* Poppins-Black.ttf */; };
 		BD7EE63F26FBD5A600D54707 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7EE62F26FBD59300D54707 /* Poppins-BlackItalic.ttf */; };
 		BD7EE64026FBD5A800D54707 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7EE63A26FBD59400D54707 /* Poppins-Bold.ttf */; };
@@ -47,6 +49,8 @@
 		BD11ADE2272EF0EE0020E9D9 /* chatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatBotViewController.swift; sourceTree = "<group>"; };
 		BD11ADE4272EF1060020E9D9 /* prescribedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prescribedViewController.swift; sourceTree = "<group>"; };
 		BD11ADE6272EF11F0020E9D9 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		BD698FA0272F1DB900C0EFF8 /* doctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doctorViewController.swift; sourceTree = "<group>"; };
+		BD698FA2272F1DE900C0EFF8 /* pLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pLinksViewController.swift; sourceTree = "<group>"; };
 		BD7EE62B26FBD59200D54707 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
 		BD7EE62C26FBD59200D54707 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
 		BD7EE62D26FBD59200D54707 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 				BD7EE64E26FD293F00D54707 /* SignUpViewController.swift */,
 				BD11ADE2272EF0EE0020E9D9 /* chatBotViewController.swift */,
 				BD11ADE4272EF1060020E9D9 /* prescribedViewController.swift */,
+				BD698FA0272F1DB900C0EFF8 /* doctorViewController.swift */,
+				BD698FA2272F1DE900C0EFF8 /* pLinksViewController.swift */,
 				BD11ADE6272EF11F0020E9D9 /* profileViewController.swift */,
 			);
 			path = Controller;
@@ -272,7 +278,6 @@
 				BD7EE64826FBD5BC00D54707 /* Poppins-LightItalic.ttf in Resources */,
 				BD7EE64426FBD5B200D54707 /* Poppins-ExtraLight.ttf in Resources */,
 				BDE1A3792691E98D00C29042 /* Assets.xcassets in Resources */,
-				BD7EE63C26FBD59A00D54707 /* Poppins-Regular.ttf in Resources */,
 				BD7EE64D26FBD7BD00D54707 /* Poppins-Medium.ttf in Resources */,
 				BDE1A390269B4C1100C29042 /* GoogleService-Info-2.plist in Resources */,
 				BD7EE64626FBD5B700D54707 /* Poppins-Italic.ttf in Resources */,
@@ -280,6 +285,7 @@
 				BD7EE64026FBD5A800D54707 /* Poppins-Bold.ttf in Resources */,
 				BD7EE64126FBD5AB00D54707 /* Poppins-BoldItalic.ttf in Resources */,
 				BD7EE64526FBD5B400D54707 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				BD698FA4272F20D200C0EFF8 /* Poppins-Regular.ttf in Resources */,
 				BD7EE63F26FBD5A600D54707 /* Poppins-BlackItalic.ttf in Resources */,
 				BDE1A3772691E97F00C29042 /* Main.storyboard in Resources */,
 			);
@@ -335,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE1A39726A484E400C29042 /* LoginViewController.swift in Sources */,
+				BD698FA3272F1DE900C0EFF8 /* pLinksViewController.swift in Sources */,
 				BD7EE64F26FD293F00D54707 /* SignUpViewController.swift in Sources */,
+				BD698FA1272F1DB900C0EFF8 /* doctorViewController.swift in Sources */,
 				BD11ADE3272EF0EE0020E9D9 /* chatBotViewController.swift in Sources */,
 				BD11ADE5272EF1060020E9D9 /* prescribedViewController.swift in Sources */,
 				BDE1A38A2691FC8D00C29042 /* User.swift in Sources */,

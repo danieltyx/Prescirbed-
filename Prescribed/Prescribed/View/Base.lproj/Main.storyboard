@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -170,23 +171,220 @@
             </objects>
             <point key="canvasLocation" x="-597.10144927536237" y="38.839285714285715"/>
         </scene>
-        <!--Prescriptions-->
+        <!--Prescribed View Controller-->
         <scene sceneID="yJG-pP-oWW">
             <objects>
                 <viewController id="MpS-fS-fMU" customClass="prescribedViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pGk-ew-qD3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="doctor_and_text_watermark" translatesAutoresizingMaskIntoConstraints="NO" id="vzW-1W-C6N">
+                                <rect key="frame" x="0.0" y="201" width="449" height="520"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="top_rect_mainpage" translatesAutoresizingMaskIntoConstraints="NO" id="lYb-Ty-nuX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQT-kc-4K2">
+                                <rect key="frame" x="40" y="258" width="236" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEY-Vp-EP5">
+                                <rect key="frame" x="40" y="342" width="333" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="Profile" title="Edward Kim">
+                                    <color key="baseBackgroundColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="UXU-0W-4zU" kind="presentation" id="FYE-OY-uLb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i0V-Jw-Jyp">
+                                <rect key="frame" x="340" y="35" width="46" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-Jd-Tpy">
+                                <rect key="frame" x="40" y="420" width="333" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="Profile" title="Krysten Hanson">
+                                    <color key="baseBackgroundColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Welcome, Isabelle" translatesAutoresizingMaskIntoConstraints="NO" id="P3N-O5-si2">
+                                <rect key="frame" x="40" y="44" width="236" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="h4s-1i-ZbJ"/>
                         <color key="backgroundColor" name="AccentColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Prescriptions" image="square.and.pencil" catalog="system" id="ldY-qH-mJ1"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_heart_unselected" id="ldY-qH-mJ1"/>
+                    <connections>
+                        <outlet property="doctor1" destination="NEY-Vp-EP5" id="TUy-DL-YFX"/>
+                        <outlet property="doctor2" destination="kbc-Jd-Tpy" id="76C-qq-dM4"/>
+                        <outlet property="doctorLabel" destination="yQT-kc-4K2" id="aFp-ew-Byg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKo-7d-7Gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2294.202898550725" y="1240.8482142857142"/>
         </scene>
-        <!--ChatBot-->
+        <!--Doctor View Controller-->
+        <scene sceneID="Z2P-r2-1O9">
+            <objects>
+                <viewController id="UXU-0W-4zU" customClass="doctorViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tGP-KA-giT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="PrescriptionW" translatesAutoresizingMaskIntoConstraints="NO" id="HL1-Mo-ZBt">
+                                <rect key="frame" x="25" y="378" width="404" height="479"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDG-lt-vEU">
+                                <rect key="frame" x="40" y="503" width="333" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icon_medicine" title="Lung Cancer">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="XQK-Ov-ZNs" kind="show" id="Ucp-bn-iax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7M-CK-Ein">
+                                <rect key="frame" x="41" y="589" width="333" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icon_medicine" title="Chemotherapy">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="top_rect_prescriptions" translatesAutoresizingMaskIntoConstraints="NO" id="ofF-91-KWa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hT-Ei-77A">
+                                <rect key="frame" x="41" y="55" width="44" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Back Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="DoctorBackground" translatesAutoresizingMaskIntoConstraints="NO" id="EP9-tE-gpQ">
+                                <rect key="frame" x="40" y="44" width="334" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-br-6Zw">
+                                <rect key="frame" x="306" y="55" width="46" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prescriptions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQd-pz-Ydo">
+                                <rect key="frame" x="40" y="438" width="334" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjr-Xf-Tfi">
+                                <rect key="frame" x="41" y="673" width="333" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="icon_medicine" title="Surgery">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    <color key="baseBackgroundColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WDA-2e-3Ar"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="prescribed1" destination="DDG-lt-vEU" id="3Qj-RY-PaA"/>
+                        <outlet property="prescribed2" destination="T7M-CK-Ein" id="eeb-f6-eWt"/>
+                        <outlet property="prescribed3" destination="Xjr-Xf-Tfi" id="9A4-C7-CI6"/>
+                        <outlet property="prescriptionsLabel" destination="AQd-pz-Ydo" id="aT5-mZ-9II"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7QU-dW-k2S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1421.7391304347827" y="1242.8571428571429"/>
+        </scene>
+        <!--Links View Controller-->
+        <scene sceneID="0D4-9n-ypa">
+            <objects>
+                <viewController id="XQK-Ov-ZNs" customClass="pLinksViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zaa-lw-Pri">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-VW-Ktc">
+                                <rect key="frame" x="40" y="59" width="44" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Back Button"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="links_text_watermark" translatesAutoresizingMaskIntoConstraints="NO" id="PX4-K3-eXB">
+                                <rect key="frame" x="86" y="243" width="144" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="article" translatesAutoresizingMaskIntoConstraints="NO" id="d22-fT-Dia">
+                                <rect key="frame" x="40" y="277" width="334" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="5yg-vB-7gk">
+                                <rect key="frame" x="40" y="357" width="334" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Illness" translatesAutoresizingMaskIntoConstraints="NO" id="vIQ-1V-tIg">
+                                <rect key="frame" x="40" y="120" width="334" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lung Cancer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSR-6s-wNM">
+                                <rect key="frame" x="86" y="60" width="198" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prescribed Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q71-L6-alZ">
+                                <rect key="frame" x="40" y="187" width="281" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="video" translatesAutoresizingMaskIntoConstraints="NO" id="uEm-dk-NYn">
+                                <rect key="frame" x="40" y="443" width="334" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="FAB Ask Specific" translatesAutoresizingMaskIntoConstraints="NO" id="agS-pi-sDi">
+                                <rect key="frame" x="318" y="732" width="76" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hdj-Cg-esl"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VKo-1f-RCH"/>
+                    <connections>
+                        <outlet property="pLinksLabel" destination="Q71-L6-alZ" id="MF0-py-Ajs"/>
+                        <outlet property="titleLabel" destination="jSR-6s-wNM" id="6eq-LK-V1e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWY-tL-XP9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-597" y="1386"/>
+        </scene>
+        <!--Chat Bot View Controller-->
         <scene sceneID="Dwu-f9-fPp">
             <objects>
                 <viewController id="Gre-F5-Iki" customClass="chatBotViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +394,10 @@
                         <viewLayoutGuide key="safeArea" id="hKG-we-bZI"/>
                         <color key="backgroundColor" name="AccentColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ChatBot" image="message" catalog="system" id="zea-DD-tkI"/>
+                    <tabBarItem key="tabBarItem" title="" id="zea-DD-tkI">
+                        <imageReference key="image" image="icon_chat_unselected" symbolScale="default" renderingMode="template"/>
+                        <color key="badgeColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NH1-xl-aDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,6 +411,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.32927572729999999" green="0.69379609819999999" blue="0.2508650422" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="Gre-F5-Iki" kind="relationship" relationship="viewControllers" id="Lp4-ZO-E10"/>
@@ -221,21 +423,51 @@
             </objects>
             <point key="canvasLocation" x="-3062" y="847"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="0bf-fg-no7">
             <objects>
                 <viewController id="SQw-3M-kme" customClass="profileViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="024-dB-LmG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rect_profile_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="zEl-vo-IFp">
+                                <rect key="frame" x="40" y="685" width="334" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rect_profile_top" translatesAutoresizingMaskIntoConstraints="NO" id="aan-DH-zS0">
+                                <rect key="frame" x="40" y="159" width="334" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="My Profile-1" translatesAutoresizingMaskIntoConstraints="NO" id="2uf-BS-DPS">
+                                <rect key="frame" x="40" y="75" width="199" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rect_profile_middle" translatesAutoresizingMaskIntoConstraints="NO" id="YoQ-ds-U8Z">
+                                <rect key="frame" x="40" y="448" width="334" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="PInfo" translatesAutoresizingMaskIntoConstraints="NO" id="Tp1-MU-uw6">
+                                <rect key="frame" x="89" y="463" width="233" height="178"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="PName" translatesAutoresizingMaskIntoConstraints="NO" id="apg-b4-s52">
+                                <rect key="frame" x="81" y="176" width="246" height="222"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ID bellaxing@gmail.com" translatesAutoresizingMaskIntoConstraints="NO" id="fU1-wq-kys">
+                                <rect key="frame" x="92" y="713" width="230" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dT0-cG-ZLF"/>
                         <color key="backgroundColor" name="AccentColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="xph-6N-Cos"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_profile_unselected" id="xph-6N-Cos"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emw-ra-fYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2341" y="1942"/>
+            <point key="canvasLocation" x="-2342.0289855072465" y="1941.9642857142856"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="eJm-My-wfj">
@@ -322,12 +554,34 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Back Button" width="38" height="38"/>
+        <image name="DoctorBackground" width="291" height="235"/>
+        <image name="FAB Ask Specific" width="76" height="76"/>
+        <image name="ID bellaxing@gmail.com" width="230" height="44"/>
+        <image name="Illness" width="329" height="45"/>
         <image name="Image-1" width="76" height="76"/>
+        <image name="My Profile-1" width="199" height="53"/>
+        <image name="PInfo" width="233" height="178"/>
+        <image name="PName" width="246" height="222"/>
         <image name="Patient Vector" width="324" height="283"/>
+        <image name="PrescriptionW" width="335" height="435"/>
+        <image name="Profile" width="25" height="25"/>
+        <image name="Welcome, Isabelle" width="187" height="67"/>
+        <image name="article" width="329" height="63"/>
+        <image name="doctor_and_text_watermark" width="335" height="465"/>
         <image name="greeting_page_export-1" width="375" height="489"/>
-        <image name="message" catalog="system" width="128" height="113"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <image name="icon_chat_unselected" width="36" height="34"/>
+        <image name="icon_heart_unselected" width="36" height="34"/>
+        <image name="icon_medicine" width="26" height="26"/>
+        <image name="icon_profile_unselected" width="24" height="30"/>
+        <image name="links_text_watermark" width="144" height="50"/>
+        <image name="profileIcon" width="46" height="46"/>
+        <image name="rect_profile_bottom" width="313" height="100"/>
+        <image name="rect_profile_middle" width="310" height="209"/>
+        <image name="rect_profile_top" width="313" height="256"/>
+        <image name="top_rect_mainpage" width="375" height="156"/>
+        <image name="top_rect_prescriptions" width="375" height="317"/>
+        <image name="video" width="329" height="63"/>
         <namedColor name="AccentColor">
             <color red="0.86299997568130493" green="0.89399999380111694" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
