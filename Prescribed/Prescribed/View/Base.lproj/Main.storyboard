@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5ua-Jo-pbN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lMB-6a-dZA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -171,20 +171,72 @@
             </objects>
             <point key="canvasLocation" x="-597.10144927536237" y="38.839285714285715"/>
         </scene>
-        <!--View Controller-->
+        <!--Prescriptions-->
+        <scene sceneID="yJG-pP-oWW">
+            <objects>
+                <viewController id="MpS-fS-fMU" customClass="prescribedViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pGk-ew-qD3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h4s-1i-ZbJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Prescriptions" image="square.and.pencil" catalog="system" id="ldY-qH-mJ1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKo-7d-7Gr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2294" y="1241"/>
+        </scene>
+        <!--ChatBot-->
+        <scene sceneID="Dwu-f9-fPp">
+            <objects>
+                <viewController id="Gre-F5-Iki" customClass="chatBotViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Dk-d9-3rc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hKG-we-bZI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ChatBot" image="message" catalog="system" id="zea-DD-tkI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NH1-xl-aDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2294" y="591"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8kM-cV-LGW">
+            <objects>
+                <tabBarController id="lMB-6a-dZA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yh3-PS-OWC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gre-F5-Iki" kind="relationship" relationship="viewControllers" id="Lp4-ZO-E10"/>
+                        <segue destination="MpS-fS-fMU" kind="relationship" relationship="viewControllers" id="cED-Kd-AhG"/>
+                        <segue destination="SQw-3M-kme" kind="relationship" relationship="viewControllers" id="SI4-nF-No2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBh-q8-1ld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3062" y="847"/>
+        </scene>
+        <!--Profile-->
         <scene sceneID="0bf-fg-no7">
             <objects>
-                <viewController id="SQw-3M-kme" sceneMemberID="viewController">
+                <viewController id="SQw-3M-kme" customClass="profileViewController" customModule="Prescribed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="024-dB-LmG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="dT0-cG-ZLF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="xph-6N-Cos"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="emw-ra-fYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1620" y="722"/>
+            <point key="canvasLocation" x="-2341" y="1942"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="eJm-My-wfj">
@@ -274,6 +326,9 @@
         <image name="Image-1" width="76" height="76"/>
         <image name="Patient Vector" width="324" height="283"/>
         <image name="greeting_page_export-1" width="375" height="489"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <namedColor name="AccentColor">
             <color red="0.86299997568130493" green="0.89399999380111694" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
