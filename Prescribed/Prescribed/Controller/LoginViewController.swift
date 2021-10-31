@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         loginLabel.font = UIFont(name: "Poppins-Medium", size: 24)
         loginLabel.text = "Login"
         
-        var paragraphStyle = NSMutableParagraphStyle()
+        let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 0.8
         
         directionsLabel.textColor = UIColor(red: 0.086, green: 0.706, blue: 0.149, alpha: 1)
