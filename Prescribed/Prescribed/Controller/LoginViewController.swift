@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import FirebaseAuth
+
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
@@ -23,6 +27,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var vector1: UILabel!
     @IBOutlet weak var vector2: UILabel!
     
+    let loginToCheckin = "LoginToCheckin"
+    let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let ref = Database.database().reference(withPath: "prescribed-d767b-default-rtdb")
+    var email = ""
+    var firstname = ""
+    var lastname = ""
+    var userInfoRef: DatabaseReference!
     
     override func viewDidLoad()
     {
@@ -72,27 +84,21 @@ class LoginViewController: UIViewController {
         loginWatermark.textColor = UIColor(red: 0.086, green: 0.706, blue: 0.149, alpha: 0.13)
         loginWatermark.font = UIFont(name: "Poppins-Medium", size: 72)
         loginWatermark.attributedText = NSMutableAttributedString(string: "Log In", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
-
-//        vector1.frame = CGRect(x: 50, y: 284, width: 275, height: 0)
-//        vector1.backgroundColor = .white
-//
-//        vector2.frame = CGRect(x: 50, y: 384, width: 275, height: 0)
-//        vector2.backgroundColor = .white
-//
-//
-//        var stroke = UIView()
-//
-//        stroke.bounds = view.bounds.insetBy(dx: -0.5, dy: -0.5)
-//        stroke.center = view.center
-//
-//
-//        vector1.bounds = view.bounds.insetBy(dx: -0.5, dy: -0.5)
-//
-//
-//        vector2.bounds = view.bounds.insetBy(dx: -0.5, dy: -0.5)
-//
-//        stroke.layer.borderWidth = 1
-//        stroke.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        
+        Auth.auth().addStateDidChangeListener()
+        {
+            auth, user in if user != nil
+            {
+                
+                //self.performSegue(withIdentifier: self.loginToCheckin, sender: nil)
+                
+                self.emailTextField.text = nil
+                self.passwordTextField.text = nil
+                //self.appDelegate.window?.rootViewController = self.tabBarController
+            }
+        }
+        
+        userInfoRef = Database.database().reference(withPath: "UserInfo")
 
 
         self.view.addSubview(backButton)
@@ -109,6 +115,33 @@ class LoginViewController: UIViewController {
 
         
     }
+    @IBAction func loginDidTouch(_ sender: Any)
+    {
+        guard
+          let email = emailTextField.text,
+          let password = passwordTextField.text,
+          email.count > 0,
+          password.count > 0
+          else
+            {
+                return
+            }
+   
+        Auth.auth().signIn(withEmail: email, password: password)
+        { user, error in
+          if let error = error, user == nil
+          {
+            let alert = UIAlertController(title: "Sign In Failed",
+                                          message: error.localizedDescription,
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            
+            self.present(alert, animated: true, completion: nil)
+          }
+        }
+    }
+    
     @IBAction func backAction(_ sender: Any) {
     }
     

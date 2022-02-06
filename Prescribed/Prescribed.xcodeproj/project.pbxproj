@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0C62B027AF6976000FF08C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD0C62AF27AF6976000FF08C /* GoogleService-Info.plist */; };
 		BD11ADE3272EF0EE0020E9D9 /* chatBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11ADE2272EF0EE0020E9D9 /* chatBotViewController.swift */; };
 		BD11ADE5272EF1060020E9D9 /* prescribedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11ADE4272EF1060020E9D9 /* prescribedViewController.swift */; };
 		BD11ADE7272EF11F0020E9D9 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD11ADE6272EF11F0020E9D9 /* profileViewController.swift */; };
@@ -38,7 +39,6 @@
 		BDE1A38A2691FC8D00C29042 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1A3892691FC8D00C29042 /* User.swift */; };
 		BDE1A38C2691FCA900C29042 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1A38B2691FCA900C29042 /* UserInfo.swift */; };
 		BDE1A38E269B487900C29042 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1A38D269B487900C29042 /* WelcomeViewController.swift */; };
-		BDE1A390269B4C1100C29042 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDE1A38F269B4C1100C29042 /* GoogleService-Info-2.plist */; };
 		BDE1A392269B556D00C29042 /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = BDE1A391269B556D00C29042 /* Poppins */; };
 		BDE1A39726A484E400C29042 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE1A39626A484E400C29042 /* LoginViewController.swift */; };
 		F99AEEEAC2A62091D009B725 /* Pods_Prescribed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAFFE6A0025D4D1B8259D1E2 /* Pods_Prescribed.framework */; };
@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1C7414805B07892EB2C0B916 /* Pods-Prescribed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prescribed.debug.xcconfig"; path = "Target Support Files/Pods-Prescribed/Pods-Prescribed.debug.xcconfig"; sourceTree = "<group>"; };
+		BD0C62AF27AF6976000FF08C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD11ADE2272EF0EE0020E9D9 /* chatBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatBotViewController.swift; sourceTree = "<group>"; };
 		BD11ADE4272EF1060020E9D9 /* prescribedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prescribedViewController.swift; sourceTree = "<group>"; };
 		BD11ADE6272EF11F0020E9D9 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +80,6 @@
 		BDE1A3892691FC8D00C29042 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BDE1A38B2691FCA900C29042 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BDE1A38D269B487900C29042 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		BDE1A38F269B4C1100C29042 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		BDE1A391269B556D00C29042 /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		BDE1A39626A484E400C29042 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAFFE6A0025D4D1B8259D1E2 /* Pods_Prescribed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Prescribed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +143,7 @@
 				BDE1A3882691FBA900C29042 /* Controller */,
 				BDE1A393269B558800C29042 /* Fonts */,
 				BDE1A37D2691E98D00C29042 /* Info.plist */,
-				BDE1A38F269B4C1100C29042 /* GoogleService-Info-2.plist */,
+				BD0C62AF27AF6976000FF08C /* GoogleService-Info.plist */,
 			);
 			path = Prescribed;
 			sourceTree = "<group>";
@@ -279,13 +279,13 @@
 				BD7EE64426FBD5B200D54707 /* Poppins-ExtraLight.ttf in Resources */,
 				BDE1A3792691E98D00C29042 /* Assets.xcassets in Resources */,
 				BD7EE64D26FBD7BD00D54707 /* Poppins-Medium.ttf in Resources */,
-				BDE1A390269B4C1100C29042 /* GoogleService-Info-2.plist in Resources */,
 				BD7EE64626FBD5B700D54707 /* Poppins-Italic.ttf in Resources */,
 				BD7EE64B26FBD5C500D54707 /* Poppins-Thin.ttf in Resources */,
 				BD7EE64026FBD5A800D54707 /* Poppins-Bold.ttf in Resources */,
 				BD7EE64126FBD5AB00D54707 /* Poppins-BoldItalic.ttf in Resources */,
 				BD7EE64526FBD5B400D54707 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				BD698FA4272F20D200C0EFF8 /* Poppins-Regular.ttf in Resources */,
+				BD0C62B027AF6976000FF08C /* GoogleService-Info.plist in Resources */,
 				BD7EE63F26FBD5A600D54707 /* Poppins-BlackItalic.ttf in Resources */,
 				BDE1A3772691E97F00C29042 /* Main.storyboard in Resources */,
 			);
